@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InappProductView" customModule="InappPurchase" customModuleProvider="target">
+            <connections>
+                <outlet property="productListTableView" destination="dLi-dE-Afe" id="pYr-SD-RzI"/>
+                <outlet property="stackView" destination="Ofj-lt-qCi" id="MAf-sq-X1s"/>
+                <outlet property="tableViewHeightConstraint" destination="jGf-ih-FTF" id="Lbn-Xr-Pxj"/>
+                <outlet property="view" destination="iN0-l3-epB" id="gTf-Sb-wfV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ofj-lt-qCi">
+                    <rect key="frame" x="20" y="193.5" width="335" height="300"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dLi-dE-Afe">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="300"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="jGf-ih-FTF"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="kkb-zs-B4j"/>
+                                <outlet property="delegate" destination="-1" id="RMD-BT-qUd"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.090196078430000007" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Ofj-lt-qCi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="BPd-yL-d5r"/>
+                <constraint firstItem="Ofj-lt-qCi" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Bxe-ya-BDX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ofj-lt-qCi" secondAttribute="trailing" constant="20" id="YL1-pK-Koz"/>
+                <constraint firstItem="Ofj-lt-qCi" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="zr2-Sa-VII"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>

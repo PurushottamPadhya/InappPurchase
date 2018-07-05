@@ -14,6 +14,13 @@
 		CE6F99C020EE2BFA00DB34F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6F99BE20EE2BFA00DB34F5 /* LaunchScreen.storyboard */; };
 		CE6F99CB20EE2BFA00DB34F5 /* InappPurchaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F99CA20EE2BFA00DB34F5 /* InappPurchaseTests.swift */; };
 		CE6F99D620EE2BFA00DB34F5 /* InappPurchaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F99D520EE2BFA00DB34F5 /* InappPurchaseUITests.swift */; };
+		CE6F99E720EE2D6C00DB34F5 /* IAPReceiptValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F99E420EE2D6B00DB34F5 /* IAPReceiptValidation.swift */; };
+		CE6F99E820EE2D6C00DB34F5 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F99E520EE2D6B00DB34F5 /* IAPHelper.swift */; };
+		CE6F99E920EE2D6C00DB34F5 /* IAPSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F99E620EE2D6B00DB34F5 /* IAPSubscription.swift */; };
+		CE6F99EF20EE2F1200DB34F5 /* InappProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F99EB20EE2F1200DB34F5 /* InappProductView.swift */; };
+		CE6F99F020EE2F1200DB34F5 /* InappProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6F99EC20EE2F1200DB34F5 /* InappProductView.xib */; };
+		CE6F99F120EE2F1200DB34F5 /* InappTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F99ED20EE2F1200DB34F5 /* InappTableViewCell.swift */; };
+		CE6F99F220EE2F1200DB34F5 /* InappTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6F99EE20EE2F1200DB34F5 /* InappTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		CE6F99D120EE2BFA00DB34F5 /* InappPurchaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InappPurchaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6F99D520EE2BFA00DB34F5 /* InappPurchaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InappPurchaseUITests.swift; sourceTree = "<group>"; };
 		CE6F99D720EE2BFA00DB34F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE6F99E420EE2D6B00DB34F5 /* IAPReceiptValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPReceiptValidation.swift; sourceTree = "<group>"; };
+		CE6F99E520EE2D6B00DB34F5 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		CE6F99E620EE2D6B00DB34F5 /* IAPSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPSubscription.swift; sourceTree = "<group>"; };
+		CE6F99EB20EE2F1200DB34F5 /* InappProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InappProductView.swift; sourceTree = "<group>"; };
+		CE6F99EC20EE2F1200DB34F5 /* InappProductView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InappProductView.xib; sourceTree = "<group>"; };
+		CE6F99ED20EE2F1200DB34F5 /* InappTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InappTableViewCell.swift; sourceTree = "<group>"; };
+		CE6F99EE20EE2F1200DB34F5 /* InappTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InappTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +111,7 @@
 		CE6F99B420EE2BF600DB34F5 /* InappPurchase */ = {
 			isa = PBXGroup;
 			children = (
+				CE6F99E320EE2D1A00DB34F5 /* Inapp Helper */,
 				CE6F99B520EE2BF600DB34F5 /* AppDelegate.swift */,
 				CE6F99B720EE2BF600DB34F5 /* ViewController.swift */,
 				CE6F99B920EE2BF600DB34F5 /* Main.storyboard */,
@@ -123,6 +138,28 @@
 				CE6F99D720EE2BFA00DB34F5 /* Info.plist */,
 			);
 			path = InappPurchaseUITests;
+			sourceTree = "<group>";
+		};
+		CE6F99E320EE2D1A00DB34F5 /* Inapp Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CE6F99E520EE2D6B00DB34F5 /* IAPHelper.swift */,
+				CE6F99E420EE2D6B00DB34F5 /* IAPReceiptValidation.swift */,
+				CE6F99E620EE2D6B00DB34F5 /* IAPSubscription.swift */,
+				CE6F99EA20EE2E9F00DB34F5 /* Inapp  Product List View */,
+			);
+			path = "Inapp Helper";
+			sourceTree = "<group>";
+		};
+		CE6F99EA20EE2E9F00DB34F5 /* Inapp  Product List View */ = {
+			isa = PBXGroup;
+			children = (
+				CE6F99EB20EE2F1200DB34F5 /* InappProductView.swift */,
+				CE6F99EC20EE2F1200DB34F5 /* InappProductView.xib */,
+				CE6F99ED20EE2F1200DB34F5 /* InappTableViewCell.swift */,
+				CE6F99EE20EE2F1200DB34F5 /* InappTableViewCell.xib */,
+			);
+			path = "Inapp  Product List View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +266,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6F99F220EE2F1200DB34F5 /* InappTableViewCell.xib in Resources */,
 				CE6F99C020EE2BFA00DB34F5 /* LaunchScreen.storyboard in Resources */,
+				CE6F99F020EE2F1200DB34F5 /* InappProductView.xib in Resources */,
 				CE6F99BD20EE2BFA00DB34F5 /* Assets.xcassets in Resources */,
 				CE6F99BB20EE2BF600DB34F5 /* Main.storyboard in Resources */,
 			);
@@ -256,8 +295,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6F99E920EE2D6C00DB34F5 /* IAPSubscription.swift in Sources */,
+				CE6F99E820EE2D6C00DB34F5 /* IAPHelper.swift in Sources */,
 				CE6F99B820EE2BF600DB34F5 /* ViewController.swift in Sources */,
+				CE6F99E720EE2D6C00DB34F5 /* IAPReceiptValidation.swift in Sources */,
+				CE6F99F120EE2F1200DB34F5 /* InappTableViewCell.swift in Sources */,
 				CE6F99B620EE2BF600DB34F5 /* AppDelegate.swift in Sources */,
+				CE6F99EF20EE2F1200DB34F5 /* InappProductView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
