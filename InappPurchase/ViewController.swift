@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var inappProductView : InappProductView!
+    var hud : JGProgressHud!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -18,6 +20,10 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func subscriptionInappClicked(_ sender: Any) {
+        self.initiateInappPayment()
     }
 
     func initiateInappPayment(){
@@ -166,8 +172,6 @@ class ViewController: UIViewController {
         self.present(alertController, animated: true)
     }
 
-    @IBAction func subscriptionInappClicked(_ sender: Any) {
-        
-    }
+
 }
 

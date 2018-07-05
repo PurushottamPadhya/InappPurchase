@@ -21,6 +21,7 @@
 		CE6F99F020EE2F1200DB34F5 /* InappProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6F99EC20EE2F1200DB34F5 /* InappProductView.xib */; };
 		CE6F99F120EE2F1200DB34F5 /* InappTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F99ED20EE2F1200DB34F5 /* InappTableViewCell.swift */; };
 		CE6F99F220EE2F1200DB34F5 /* InappTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6F99EE20EE2F1200DB34F5 /* InappTableViewCell.xib */; };
+		DD0128F0720D67D1A33C30F5 /* Pods_InappPurchase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C3D14ADE28946786754616 /* Pods_InappPurchase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		035BADF84CA95DB572B0E708 /* Pods-InappPurchase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InappPurchase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InappPurchase/Pods-InappPurchase.debug.xcconfig"; sourceTree = "<group>"; };
+		30C3D14ADE28946786754616 /* Pods_InappPurchase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InappPurchase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A3764B34826EF444E75EBDD /* Pods-InappPurchase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InappPurchase.release.xcconfig"; path = "Pods/Target Support Files/Pods-InappPurchase/Pods-InappPurchase.release.xcconfig"; sourceTree = "<group>"; };
 		CE6F99B220EE2BF600DB34F5 /* InappPurchase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InappPurchase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6F99B520EE2BF600DB34F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE6F99B720EE2BF600DB34F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD0128F0720D67D1A33C30F5 /* Pods_InappPurchase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9338DE39B09F80B78415DA0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				035BADF84CA95DB572B0E708 /* Pods-InappPurchase.debug.xcconfig */,
+				4A3764B34826EF444E75EBDD /* Pods-InappPurchase.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9BA16B833411E0BEDD10E49F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30C3D14ADE28946786754616 /* Pods_InappPurchase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE6F99A920EE2BF600DB34F5 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +117,8 @@
 				CE6F99C920EE2BFA00DB34F5 /* InappPurchaseTests */,
 				CE6F99D420EE2BFA00DB34F5 /* InappPurchaseUITests */,
 				CE6F99B320EE2BF600DB34F5 /* Products */,
+				9338DE39B09F80B78415DA0D /* Pods */,
+				9BA16B833411E0BEDD10E49F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE6F99DA20EE2BFA00DB34F5 /* Build configuration list for PBXNativeTarget "InappPurchase" */;
 			buildPhases = (
+				0D287EA87FA952C1164C7B9D /* [CP] Check Pods Manifest.lock */,
 				CE6F99AE20EE2BF600DB34F5 /* Sources */,
 				CE6F99AF20EE2BF600DB34F5 /* Frameworks */,
 				CE6F99B020EE2BF600DB34F5 /* Resources */,
+				E90510350100F3A58C8BF9C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,6 +315,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D287EA87FA952C1164C7B9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InappPurchase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E90510350100F3A58C8BF9C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-InappPurchase/Pods-InappPurchase-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InappPurchase/Pods-InappPurchase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE6F99AE20EE2BF600DB34F5 /* Sources */ = {
@@ -472,14 +539,12 @@
 		};
 		CE6F99DB20EE2BFA00DB34F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 035BADF84CA95DB572B0E708 /* Pods-InappPurchase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InappPurchase/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Purushottam.InappPurchase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -489,14 +554,12 @@
 		};
 		CE6F99DC20EE2BFA00DB34F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A3764B34826EF444E75EBDD /* Pods-InappPurchase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InappPurchase/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Purushottam.InappPurchase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -511,11 +574,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InappPurchaseTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Purushottam.InappPurchaseTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -531,11 +590,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InappPurchaseTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Purushottam.InappPurchaseTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -550,11 +605,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InappPurchaseUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Purushottam.InappPurchaseUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -569,11 +620,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InappPurchaseUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Purushottam.InappPurchaseUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
