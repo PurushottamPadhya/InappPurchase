@@ -21,6 +21,7 @@
 		CE6F99F020EE2F1200DB34F5 /* InappProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6F99EC20EE2F1200DB34F5 /* InappProductView.xib */; };
 		CE6F99F120EE2F1200DB34F5 /* InappTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F99ED20EE2F1200DB34F5 /* InappTableViewCell.swift */; };
 		CE6F99F220EE2F1200DB34F5 /* InappTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6F99EE20EE2F1200DB34F5 /* InappTableViewCell.xib */; };
+		CEB42A2420EF62A600E61A01 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB42A2320EF62A600E61A01 /* Helper.swift */; };
 		DD0128F0720D67D1A33C30F5 /* Pods_InappPurchase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C3D14ADE28946786754616 /* Pods_InappPurchase.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		CE6F99EC20EE2F1200DB34F5 /* InappProductView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InappProductView.xib; sourceTree = "<group>"; };
 		CE6F99ED20EE2F1200DB34F5 /* InappTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InappTableViewCell.swift; sourceTree = "<group>"; };
 		CE6F99EE20EE2F1200DB34F5 /* InappTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InappTableViewCell.xib; sourceTree = "<group>"; };
+		CEB42A2320EF62A600E61A01 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		CE6F99B420EE2BF600DB34F5 /* InappPurchase */ = {
 			isa = PBXGroup;
 			children = (
+				CEB42A2520EF62AE00E61A01 /* Helper */,
 				CE6F99E320EE2D1A00DB34F5 /* Inapp Helper */,
 				CE6F99B520EE2BF600DB34F5 /* AppDelegate.swift */,
 				CE6F99B720EE2BF600DB34F5 /* ViewController.swift */,
@@ -184,6 +187,14 @@
 				CE6F99EE20EE2F1200DB34F5 /* InappTableViewCell.xib */,
 			);
 			path = "Inapp  Product List View";
+			sourceTree = "<group>";
+		};
+		CEB42A2520EF62AE00E61A01 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CEB42A2320EF62A600E61A01 /* Helper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +380,7 @@
 				CE6F99F120EE2F1200DB34F5 /* InappTableViewCell.swift in Sources */,
 				CE6F99B620EE2BF600DB34F5 /* AppDelegate.swift in Sources */,
 				CE6F99EF20EE2F1200DB34F5 /* InappProductView.swift in Sources */,
+				CEB42A2420EF62A600E61A01 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,7 +556,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InappPurchase/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Purushottam.InappPurchase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -559,7 +574,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InappPurchase/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Purushottam.InappPurchase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -574,7 +592,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InappPurchaseTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Purushottam.InappPurchaseTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -590,7 +612,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InappPurchaseTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Purushottam.InappPurchaseTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -605,7 +631,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InappPurchaseUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Purushottam.InappPurchaseUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -620,7 +650,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InappPurchaseUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Purushottam.InappPurchaseUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

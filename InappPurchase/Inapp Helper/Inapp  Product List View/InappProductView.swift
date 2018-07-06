@@ -62,7 +62,6 @@ class InappProductView: UIView, UITableViewDelegate, UITableViewDataSource, UIGe
     }
     func setupInappProductList(){
         
-        userBalanceLabel.text = Utils.getUserBalanceWithSymbol()
 
         self.productListTableView.separatorColor = UIColor.clear
         self.backgroundColor = UIColor.black.withAlphaComponent(0.5)
@@ -121,7 +120,7 @@ class InappProductView: UIView, UITableViewDelegate, UITableViewDataSource, UIGe
         
         return 60
     }
-    func processPayment(sender: UIButton){
+    @objc func processPayment(sender: UIButton){
         
         guard let selectedProduct = productList?[sender.tag] else { return }
         //initiateInappPaymentwithProduct(productID: selectedProduct.product_price)
@@ -146,7 +145,7 @@ class InappProductView: UIView, UITableViewDelegate, UITableViewDataSource, UIGe
         }
         return true
     }
-    func viewTapped(sender : UITapGestureRecognizer){
+    @objc func viewTapped(sender : UITapGestureRecognizer){
         
         self.isHidden = true
         self.removeFromSuperview()

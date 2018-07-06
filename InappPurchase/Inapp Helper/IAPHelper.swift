@@ -10,6 +10,7 @@ import Foundation
 
 import UIKit
 import StoreKit
+import Alamofire
 
  enum IAPHandlerAlertType{
     case disabled
@@ -49,6 +50,7 @@ enum PRODUCT_IDENTIFIERS : String
 enum USER_DEFAULTS_IDENTIFIERS : String
 {
     case TIER_ONE_PRODUCT_IDENTIFIER = "TIER_ONE_IDENTIFIER"
+    
     case TIER_TWO_PRODUCT_IDENTIFIER  = "TIER_TWO_IDENTIFIER"
     case TIER_THREE_PRODUCT_IDENTIFIER  = "TIER_THREE_IDENTIFIER"
 }
@@ -60,6 +62,14 @@ enum ReceiptURL : String
     case myServer = "your server"
     
 }
+
+struct Constants
+{
+    static let inappSecretKey  = "your secret key"
+
+}
+
+
 
 
 @objc class IAPHandler: NSObject{
@@ -211,7 +221,7 @@ extension IAPHandler: SKProductsRequestDelegate, SKPaymentTransactionObserver{
     
     
     //MARK: - Handle receipt of transaction
-    func uploadReceipt(product:Subscription , completion: @escaping (Result) -> Void) {
+    func uploadReceipt(product:Subscription , completion: @escaping (Result<Any>) -> Void) {
         if let receiptData = loadReceipt() {
             
             ReceiptValidation.shared.verifyReceipt(withReceipt: receiptData, product: product) { response in

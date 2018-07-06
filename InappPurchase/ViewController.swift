@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class ViewController: UIViewController {
 
     var inappProductView : InappProductView!
-    var hud : JGProgressHud!
+    var hud : JGProgressHUD!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -44,11 +45,11 @@ class ViewController: UIViewController {
                     strongSelf.populateInappProductList(product: product!)
                 }
                 else{
-                    Utils.showToastOnView(message: "Problem in loading product data.", view: (self?.view)!)
+                    Helper.showDismisAlertWithMessage(title: "Inapp", message: type.message(), viewController: self)
                 }
                 break
             case IAPHandlerAlertType.failed:
-                Utils.showToastOnView(message: type.message(), view: (self?.view)!)
+                Helper.showDismisAlertWithMessage(title: "Inapp", message: type.message(), viewController: self)
                 break
             default:
                 break
@@ -68,7 +69,7 @@ class ViewController: UIViewController {
         }
         let mainWindow = UIApplication.shared.keyWindow!
         inappProductView = InappProductView(frame: CGRect(x: mainWindow.frame.origin.x, y: mainWindow.frame.origin.y, width: mainWindow.frame.width, height: mainWindow.frame.height))
-        inappProductView.controller = controller
+        inappProductView.controller = self
         inappProductView.productList = product
         inappProductView.setupInappProductList()
         
@@ -101,7 +102,7 @@ class ViewController: UIViewController {
                 self?.hideProgressHud()
                 selff.hideProgressHud()
                 print(type.message())
-                Utils.showToastOnView(message: type.message(), view: (self?.view)!)
+                Helper.showDismisAlertWithMessage(title: "Inapp", message: type.message(), viewController: self)
             }
         }
     }
@@ -115,28 +116,7 @@ class ViewController: UIViewController {
             switch response{
             case .success(let result):
                 print("Success in app payment\(result)")
-                if let data = result.result.value as? NSDictionary {
-                    print(data)
-                    if let status = data["status"] as? String, status == "Successful"{
-                        if let message = data["message"] as? String{
-                            self.showPaymentSucessAlertMessage(title: "Congratulations", msg: message)
-                        }
-                        if let balance = data["balance"] {
-                            UserDefaults.standard.setValue(balance, forKey: "userBalance")
-                            self.balanceLabel.text =  String("\(Utils.getCurrencySymbol()) \(balance)")
-                        }
-                    }
-                    else{
-                        if let message = data["message"] as? String{
-                            self.showPaymentSucessAlertMessage(title: "Error", msg: message)
-                        }
-                        else{
-                            self.showPaymentSucessAlertMessage(title: "Error", msg:" Error processing purchase")
-                        }
-                        
-                    }
-                    
-                }
+                self.showPaymentSucessAlertMessage(title: "Sucess", msg: "Sucess ina pp purchase")
                 self.hideProgressHud()
                 break
             case .failure(let error):
@@ -155,8 +135,10 @@ class ViewController: UIViewController {
         if self.hud != nil {
             self.hud.dismiss()
         }
-        
-        self.hud = ProgressHud.showNormalHud(view:self.view, message:message)
+        hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Loading"
+        hud.show(in: self.view)
+        hud.dismiss(afterDelay: 3.0)
         
     }
     func hideProgressHud(){

@@ -23,13 +23,13 @@ final class ReceiptValidation {
     
     private lazy var baseURL: URL = {
 
-        guard let url = URL(string: ReceiptURL.myServer) else {
+        guard let url = URL(string: ReceiptURL.myServer.rawValue) else {
             fatalError("Invalid URL")
         }
         return url
     }()
     
-    func verifyReceipt(withReceipt: Data,product: Subscription, completion: @escaping (Result) -> Void) {
+    func verifyReceipt(withReceipt: Data,product: Subscription, completion: @escaping (Result<Any>) -> Void) {
 
         let params: [String: Any] = [
             "token": withReceipt.base64EncodedString(),
@@ -51,10 +51,10 @@ final class ReceiptValidation {
     }
     
     
-    func upload(withReceipt: Data, product: Subscription, completion: @escaping (Result) -> Void) {
+    func upload(withReceipt: Data, product: Subscription, completion: @escaping (Result<Any>) -> Void) {
         let body = [
             "receipt-data": withReceipt.base64EncodedString(),
-            "password": inappSecretKey
+            "password": Constants.inappSecretKey
         ]
         let bodyData = try! JSONSerialization.data(withJSONObject: body, options: [])
         
